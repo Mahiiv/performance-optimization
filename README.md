@@ -1,16 +1,28 @@
-# React + Vite
+# Performance Optimization Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app for News Blog floor staff to track performance tasks, replacing paper and Excel sheets.
 
-Currently, two official plugins are available:
+## Features
+- Add tasks with title, owner and priority
+- Search tasks by title
+- Mark tasks as done
+- "No data found" message for empty lists and empty searches
+- Loading and saving indicators for slow connections
+- Form validation with red fields and error messages
+- Keyboard friendly, Lighthouse accessibility score 100
+- Text inputs are cleaned against XSS before saving
+- Console analytics message after each main action
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech
+React (Vite), Vitest, React Testing Library, ESLint
 
-## React Compiler
+## Run it
+1. `npm install`
+2. `npm run dev`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tests and lint
+- `npm test` (14 tests)
+- `npm run lint`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Process
+Built test-first with an AI assistant. All prompts are in `PROMPTS.md`.
