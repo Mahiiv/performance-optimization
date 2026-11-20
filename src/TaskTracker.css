@@ -1,0 +1,222 @@
+/* TaskTracker component styling */
+/* Strictly grey, black and white colors written as rgb() (red only for errors, also as rgb()) */
+/* NO hex colors, NO CSS variables, NO rem units, px only. Padding in 16px or 32px steps. */
+/* Using id selectors for styling */
+
+#task-tracker-app {
+  padding: 32px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+#main-heading {
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+#task-form-section {
+  padding: 32px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 32px;
+}
+
+#task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#title-group {
+  margin-bottom: 16px;
+}
+
+#title-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+#title-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+#title-error {
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+
+#owner-group {
+  margin-bottom: 16px;
+}
+
+#owner-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+#owner-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+#owner-error {
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+
+#priority-group {
+  margin-bottom: 16px;
+}
+
+#priority-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+#priority-select {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(128, 128, 128);
+  box-sizing: border-box;
+}
+
+#add-task-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+#search-section {
+  padding: 16px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 32px;
+}
+
+#search-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(128, 128, 128);
+  box-sizing: border-box;
+}
+
+#task-list-section {
+  padding: 16px;
+  border: 1px solid rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);
+}
+
+#loading-indicator {
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(100, 100, 100);
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 16px;
+}
+
+#saving-indicator {
+  padding: 16px;
+  font-size: 16px;
+  color: rgb(100, 100, 100);
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 16px;
+}
+
+#empty-state {
+  padding: 32px;
+  font-size: 18px;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  margin: 0px;
+}
+
+#task-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#task-list li {
+  padding: 16px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+}
+
+#task-list button {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 30, 30);
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+#task-list button:disabled {
+  background-color: rgb(200, 200, 200);
+  color: rgb(100, 100, 100);
+  border: 1px solid rgb(200, 200, 200);
+  cursor: not-allowed;
+}
+
+/* Accessible focus outlines */
+#search-input:focus,
+#title-input:focus,
+#owner-input:focus,
+#priority-select:focus,
+#add-task-btn:focus,
+#task-list button:focus {
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: 2px;
+}
